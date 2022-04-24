@@ -195,6 +195,9 @@ export default function Home() {
     setData(result);
     setInit(result);
     setShowModalTutorial(true);
+  }, []);
+
+  useEffect(() => {
     document.addEventListener("keydown", keyPress);
     return () => document.removeEventListener("keydown", keyPress);
   }, [keyPress]);
