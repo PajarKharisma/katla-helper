@@ -194,7 +194,7 @@ export default function Home() {
     });
     setData(result);
     setInit(result);
-
+    setShowModalTutorial(true);
     document.addEventListener("keydown", keyPress);
     return () => document.removeEventListener("keydown", keyPress);
   }, [keyPress]);
@@ -312,15 +312,14 @@ export default function Home() {
               ditebak.`}
             </li>
             <li>
-              {`Ceklis set exclude untuk menambah daftar huruf yang
+              {`Ceklis "Atur huruf yang dikecualikan" untuk menambah daftar huruf yang
               dikecualikan.`}
             </li>
             <li>
-              {`Huruf yang dikecualikan akan berwarna merah pada papan kunci.`}
+              {`Huruf yang dikecualikan akan berwarna merah pada keyboard.`}
             </li>
             <li>
-              {`Untuk menghapus huruf dari daftar yang dikecualikan, tekan papan
-              kunci yang berwarna merah dalam posisi set exclude terceklis.`}
+              {`Untuk menghapus huruf dari daftar yang dikecualikan, tekan keyboard yang berwarna merah dalam posisi "Atur huruf yang dikecualikan" terceklis.`}
             </li>
             <li>
               {`Tekan "enter". Jika sudah, program akan menampilkan saran jawaban.`}
