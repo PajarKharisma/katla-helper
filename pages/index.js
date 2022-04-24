@@ -237,7 +237,7 @@ export default function Home() {
                 className="btn btn-success"
                 onClick={() => handleClick("enter")}
               >
-                {"Show suggestion"}
+                {"Tampilkan saran"}
               </button>
             </div>
           </TileContainer>
@@ -253,7 +253,7 @@ export default function Home() {
               id="defaultCheck1"
             />
             <label className="form-check-label" htmlFor="defaultCheck1">
-              Set exclude word
+              Atur huruf yang dikecualikan
             </label>
           </div>
         </div>
@@ -280,7 +280,7 @@ export default function Home() {
         scrollable={true}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Suggestion</Modal.Title>
+          <Modal.Title>Saran Jawaban</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="row">
