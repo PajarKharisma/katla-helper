@@ -253,7 +253,7 @@ export default function Home() {
               id="defaultCheck1"
             />
             <label className="form-check-label" htmlFor="defaultCheck1">
-              Atur huruf yang dikecualikan
+              {"Atur huruf yang dikecualikan"}
             </label>
           </div>
         </div>
@@ -306,23 +306,24 @@ export default function Home() {
         </Modal.Header>
         <Modal.Body>
           <ul>
-            <li>Ketuk salah satu kotak dan masukan huruf.</li>
+            <li>{`Ketuk salah satu kotak dan masukan huruf.`}</li>
             <li>
-              Biarkan kosong atau tekan "null" untuk kotak yang tidak ingin
-              ditebak.
+              {`Biarkan kosong atau tekan "null" untuk kotak yang tidak ingin
+              ditebak.`}
             </li>
             <li>
-              Ceklis set exclude untuk menambah daftar huruf yang dikecualikan.
+              {`Ceklis set exclude untuk menambah daftar huruf yang
+              dikecualikan.`}
             </li>
             <li>
-              Huruf yang dikecualikan akan berwarna merah pada papan kunci.
+              {`Huruf yang dikecualikan akan berwarna merah pada papan kunci.`}
             </li>
             <li>
-              Untuk menghapus huruf dari daftar yang dikecualikan, tekan papan
-              kunci yang berwarna merah dalam posisi set exclude terceklis.
+              {`Untuk menghapus huruf dari daftar yang dikecualikan, tekan papan
+              kunci yang berwarna merah dalam posisi set exclude terceklis.`}
             </li>
             <li>
-              Tekan "enter". Jika sudah, program akan menampilkan saran jawaban.
+              {`Tekan "enter". Jika sudah, program akan menampilkan saran jawaban.`}
             </li>
           </ul>
         </Modal.Body>
