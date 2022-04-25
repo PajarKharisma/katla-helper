@@ -34,10 +34,10 @@ export default function Home() {
     ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
     ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
     ["z", "x", "c", "v", "b", "n", "m"],
-    ["Enter", "Null", "Reset", "Backspace"],
+    ["Enter", "Space", "Reset", "Backspace"],
   ];
 
-  const actionButton = ["enter", "null", "reset", "backspace"];
+  const actionButton = ["enter", "space", "reset", "backspace"];
 
   const getInitLetter = () => {
     let start = 97;
@@ -122,7 +122,7 @@ export default function Home() {
           eraseGuess();
           break;
 
-        case "null":
+        case "space":
           enterGuess(null);
           break;
 
@@ -174,12 +174,14 @@ export default function Home() {
 
   const keyPress = useCallback(
     (e) => {
-      let key = e.key === " " ? "null" : e.key;
+      let key = e.key === " " ? "space" : e.key;
       if (
         actionButton.includes(key.toLowerCase()) ||
         getInitLetter().includes(key.toLowerCase())
       ) {
         handleClick(key);
+      } else if (key.toLowerCase() === "capslock") {
+        setExcludePhase(!excludePhase);
       }
     },
     [letterIndex, excludePhase, exclude]
@@ -256,7 +258,7 @@ export default function Home() {
               id="defaultCheck1"
             />
             <label className="form-check-label" htmlFor="defaultCheck1">
-              {"Atur huruf yang dikecualikan"}
+              {"Atur huruf yang dikecualikan [Capslock]"}
             </label>
           </div>
         </div>
@@ -311,11 +313,11 @@ export default function Home() {
           <ul>
             <li>{`Ketuk salah satu kotak dan masukan huruf.`}</li>
             <li>
-              {`Biarkan kosong atau tekan "null" untuk kotak yang tidak ingin
+              {`Biarkan kosong atau tekan "space" untuk kotak yang tidak ingin
               ditebak.`}
             </li>
             <li>
-              {`Ceklis "Atur huruf yang dikecualikan" untuk menambah daftar huruf yang
+              {`Ceklis "Atur huruf yang dikecualikan" atau tekan "capslock" pada keyboard untuk menambah daftar huruf yang
               dikecualikan.`}
             </li>
             <li>
