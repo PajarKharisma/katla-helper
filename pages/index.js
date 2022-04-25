@@ -63,7 +63,7 @@ export default function Home() {
     let _letterIndex = letterIndex;
     setGuesses((prev) => {
       const newGuesses = [...prev];
-      newGuesses[_letterIndex] = null;
+      newGuesses[_letterIndex + 1] = null;
       return newGuesses;
     });
     setLetterIndex(limitIndex(_letterIndex - 1));
